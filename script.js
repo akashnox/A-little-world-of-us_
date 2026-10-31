@@ -3,7 +3,7 @@ const musicButton=document.querySelector('[data-music]');
 let audio=null, musicOn=false;
 function startMusic(){
   if(!audio){
-    audio=new Audio('assets/music/soft-memory-loop.wav');
+    audio=new Audio('soft-memory-loop.wav');
     audio.loop=true; audio.volume=.28;
   }
   audio.play().then(()=>{musicOn=true;updateMusic()}).catch(()=>{});
@@ -35,7 +35,7 @@ document.querySelectorAll('video[data-memory-video]').forEach(video=>{
     if(placeholder){
       placeholder.hidden=false;
       const message=placeholder.querySelector('span');
-      if(message) message.innerHTML='This video could not be loaded. Check that the MP4 is inside <b>assets/videos/</b> and reopen the website.';
+      if(message) message.innerHTML='This video could not be loaded. Check that the MP4 is inside <b></b> and reopen the website.';
     }
   });
   video.load();
